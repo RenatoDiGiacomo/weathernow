@@ -5,16 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Temperatura Agora</title>
-        <link rel="stylesheet" href="/api/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/api/css/style.css" />
+        <link rel="stylesheet" href="api/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="api/css/style.css" />
     </head>
     <body>
         <div id="app">
             <div class="search-box">
-                <input type="text" placeholder="Digite o Pais, Estado, Cidade" v-model="query" @keyup="takeData" />
+                <input type="text" placeholder="Digite o Pais, Estado, Cidade" v-model="query" @change="takeData" />
             </div>
-
-            <div class="weather-box" v-if="location.name">
+            <div class="weather-box" v-if="errorStatus === 200">
                 <div class="title">
                     <p>{{location.name}}</p>
                     <span>{{location.country}}</span>
@@ -29,9 +28,13 @@
                     <p>{{condition.text}}</p>
                 </div>
             </div>
-            <div class="waitError" v-else>
-                Digite acima um Pais, Cidade ou Estado a sua escolha
+            <div class="waitError" v-else-if="errorStatus == 400">
+                <p>{{errorStatus}} - {{errorText}}</p>
+                <p>Verifique o nome</p>
+                <p>Tente Algo como <i>São Paulo</i></p>
+                <p>Nada Encontrado</p>
             </div>
+            <div class="waitError" v-else>Digite acima um Pais, Cidade ou Estado a sua escolha</div>
         </div>
         <script src="api/js/bootstrap.min.js"></script>
         <script src="api/js/vue.js"></script>

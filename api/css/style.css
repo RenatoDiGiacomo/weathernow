@@ -132,6 +132,10 @@
   font-size: 25px;
 }
 
+#app .weather-box .icon img {
+  width: 65px;
+}
+
 #app .waitError {
   text-align: center;
   font-size: 25px;
