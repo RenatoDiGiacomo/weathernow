@@ -1,0 +1,142 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(black)), url(../img/bg.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), black), url(../img/bg.jpeg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 1rem;
+}
+
+#app input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0.5rem;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input::-webkit-input-placeholder {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input:-ms-input-placeholder {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input::-ms-input-placeholder {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input::placeholder {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input:focus::-webkit-input-placeholder {
+  color: black;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input:focus:-ms-input-placeholder {
+  color: black;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input:focus::-ms-input-placeholder {
+  color: black;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app input:focus::placeholder {
+  color: black;
+  text-shadow: 2px 2px 4px black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app .weather-box {
+  display: block;
+  text-align: center;
+}
+
+#app .weather-box .title {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+#app .weather-box .title p {
+  font-size: 52px;
+}
+
+#app .weather-box .title span {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#app .weather-box .temperature {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  margin: 1.5rem 0;
+  width: 25%;
+  margin: 1.5rem auto;
+  font-size: 58px;
+  padding: 1rem;
+  border-radius: 12px;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#app .weather-box .icon p {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  font-size: 25px;
+}
+
+#app .waitError {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  margin-top: 2.5rem;
+}
+/*# sourceMappingURL=style.css.map */

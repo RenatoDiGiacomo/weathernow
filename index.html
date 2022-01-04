@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Temperatura Agora</title>
+        <link rel="stylesheet" href="/api/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/api/css/style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="search-box">
+                <input type="text" placeholder="Digite o Pais, Estado, Cidade" v-model="query" @keyup="takeData" />
+            </div>
+
+            <div class="weather-box" v-if="location.name">
+                <div class="title">
+                    <p>{{location.name}}</p>
+                    <span>{{location.country}}</span>
+                </div>
+
+                <div class="temperature">
+                    <span>{{current.temp_c}}°C</span>
+                </div>
+
+                <div class="icon">
+                    <img :src="condition.icon" :alt="condition.text" />
+                    <p>{{condition.text}}</p>
+                </div>
+            </div>
+            <div class="waitError" v-else>
+                Digite acima um Pais, Cidade ou Estado a sua escolha
+            </div>
+        </div>
+        <script src="api/js/bootstrap.min.js"></script>
+        <script src="api/js/vue.js"></script>
+        <script src="api/js/app.js"></script>
+    </body>
+</html>
