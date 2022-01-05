@@ -38,28 +38,23 @@
                     transition: all 0.2s linear;
                 }
             }
-            @media screen and (max-width:767px) {
-                &{
-                    border-radius:   6px 0 0 6px ;        
-                }
-            }
         }
         button {
             width: 100%;
             border: none;
-            border-radius: 0  6px 6px 0;
             padding: 1rem;
             background-color: rgba(255, 255, 255, 0.75);
-            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-            transition: all .2s linear;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .75);
+            transition: all 0.2s linear;
             font-size: 24px;
+            margin-top: .5rem;
             &:hover {
-                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
-                transition: all .2s linear;
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+                transition: all 0.2s linear;
             }
-            &:active{
-                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
-                transition: all .2s linear;
+            &:active {
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+                transition: all 0.2s linear;
             }
         }
     }
@@ -110,3 +105,4 @@
         margin-top: 2.5rem;
     }
 }
+
