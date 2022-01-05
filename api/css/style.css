@@ -15,7 +15,7 @@
   padding: 1rem;
 }
 
-#app input {
+#app .search-box input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.25);
   padding: 0.5rem;
@@ -29,35 +29,35 @@
   transition: all 0.2s linear;
 }
 
-#app input::-webkit-input-placeholder {
+#app .search-box input::-webkit-input-placeholder {
   color: white;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-#app input:-ms-input-placeholder {
+#app .search-box input:-ms-input-placeholder {
   color: white;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-#app input::-ms-input-placeholder {
+#app .search-box input::-ms-input-placeholder {
   color: white;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-#app input::placeholder {
+#app .search-box input::placeholder {
   color: white;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-#app input:focus {
+#app .search-box input:focus {
   background-color: rgba(255, 255, 255, 0.75);
   color: black;
   text-shadow: 2px 2px 4px black;
@@ -65,32 +65,65 @@
   transition: all 0.2s linear;
 }
 
-#app input:focus::-webkit-input-placeholder {
+#app .search-box input:focus::-webkit-input-placeholder {
   color: black;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-#app input:focus:-ms-input-placeholder {
+#app .search-box input:focus:-ms-input-placeholder {
   color: black;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-#app input:focus::-ms-input-placeholder {
+#app .search-box input:focus::-ms-input-placeholder {
   color: black;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-#app input:focus::placeholder {
+#app .search-box input:focus::placeholder {
   color: black;
   text-shadow: 2px 2px 4px black;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 767px) {
+  #app .search-box input {
+    border-radius: 6px 0 0 6px;
+  }
+}
+
+#app .search-box button {
+  width: 100%;
+  border: none;
+  border-radius: 0  6px 6px 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  font-size: 24px;
+}
+
+#app .search-box button:hover {
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+#app .search-box button:active {
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 #app .weather-box {
@@ -117,6 +150,7 @@
   text-shadow: 2px 2px 4px black;
   margin: 1.5rem 0;
   width: 25%;
+  min-width: 238px;
   margin: 1.5rem auto;
   font-size: 58px;
   padding: 1rem;

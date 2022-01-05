@@ -5,7 +5,7 @@ const vm = new Vue({
         url_base: "http://api.weatherapi.com/v1/current.json",
         query: "",
         errorStatus: "",
-        errorText:"",
+        errorText: "",
 
         //items
         weather: {},
@@ -17,8 +17,8 @@ const vm = new Vue({
         takeData() {
             fetch(`${this.url_base}?key=${this.api_key}&q=${this.query}&lang=pt`)
                 .then((r) => {
-                    this.errorStatus = r.status
-                    this.errorText = r.statusText
+                    this.errorStatus = r.status;
+                    this.errorText = r.statusText;
                     if (r.ok || r.status != 400) {
                         return r.json();
                     }

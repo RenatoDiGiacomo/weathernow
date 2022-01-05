@@ -10,35 +10,60 @@
     background-repeat: no-repeat;
     height: 100vh;
     padding: 1rem;
-
-    input {
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.25);
-        padding: 0.5rem;
-        font-size: 25px;
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        color: white;
-        text-shadow: 2px 2px 4px black;
-        transition: all 0.2s linear;
-        &::placeholder {
+    .search-box {
+        input {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.25);
+            padding: 0.5rem;
+            font-size: 25px;
+            border: none;
+            outline: none;
+            border-radius: 6px;
             color: white;
             text-shadow: 2px 2px 4px black;
             transition: all 0.2s linear;
-        }
-        &:focus {
-            background-color: rgba(255, 255, 255, 0.75);
-            color: black;
-            text-shadow: 2px 2px 4px black;
-            transition: all 0.2s linear;
             &::placeholder {
-                color: black;
+                color: white;
                 text-shadow: 2px 2px 4px black;
                 transition: all 0.2s linear;
             }
+            &:focus {
+                background-color: rgba(255, 255, 255, 0.75);
+                color: black;
+                text-shadow: 2px 2px 4px black;
+                transition: all 0.2s linear;
+                &::placeholder {
+                    color: black;
+                    text-shadow: 2px 2px 4px black;
+                    transition: all 0.2s linear;
+                }
+            }
+            @media screen and (max-width:767px) {
+                &{
+                    border-radius:   6px 0 0 6px ;        
+                }
+            }
+        }
+        button {
+            width: 100%;
+            border: none;
+            border-radius: 0  6px 6px 0;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.75);
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+            transition: all .2s linear;
+            font-size: 24px;
+            &:hover {
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+                transition: all .2s linear;
+            }
+            &:active{
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+                transition: all .2s linear;
+            }
         }
     }
+
     .weather-box {
         display: block;
         text-align: center;
@@ -58,6 +83,7 @@
             text-shadow: 2px 2px 4px black;
             margin: 1.5rem 0;
             width: 25%;
+            min-width: 238px;
             margin: 1.5rem auto;
             font-size: 58px;
             padding: 1rem;
@@ -71,8 +97,8 @@
                 text-shadow: 2px 2px 4px black;
                 font-size: 25px;
             }
-            img{
-                width:65px;
+            img {
+                width: 65px;
             }
         }
     }
